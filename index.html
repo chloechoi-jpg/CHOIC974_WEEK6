@@ -76,8 +76,18 @@
     .red {
       left: calc(210 * var(--s));
       top: calc(470 * var(--s));
-      width: calc(114 * var(--s));
+      width: calc(80 * var(--s));
       height: calc(511 * var(--s));
+      background: rgb(173, 34, 43);
+    }
+
+    .red::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(144 * var(--s));
+      height: calc(80 * var(--s));
       background: rgb(173, 34, 43);
     }
 
