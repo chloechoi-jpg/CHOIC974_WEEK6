@@ -19,23 +19,135 @@
       background: rgb(224, 221, 218);
     }
 
-    body::before {
-      content: "";
-      width: min(88vw, 760px);
-      aspect-ratio: 1000 / 1169;
-      background:
-        linear-gradient(rgb(205, 199, 189), rgb(205, 199, 189)) 15.7% 91.2% / 66.2% 3.9% no-repeat,
-        linear-gradient(rgb(40, 166, 82), rgb(40, 166, 82)) 14.2% 84.1% / 72.8% 7.0% no-repeat,
-        linear-gradient(rgb(173, 34, 43), rgb(173, 34, 43)) 21.0% 40.2% / 14.4% 43.7% no-repeat,
-        linear-gradient(rgb(199, 219, 76), rgb(199, 219, 76)) 45.8% 29.9% / 10.0% 37.5% no-repeat,
-        linear-gradient(rgb(148, 113, 154), rgb(148, 113, 154)) 35.4% 21.4% / 42.3% 20.3% no-repeat,
-        linear-gradient(rgb(169, 136, 176), rgb(169, 136, 176)) 47.7% 68.6% / 13.6% 0.7% no-repeat,
-        linear-gradient(rgb(242, 136, 162), rgb(242, 136, 162)) 13.9% 14.3% / 73.3% 69.6% no-repeat,
-        rgb(224, 221, 218);
+    .painting {
+      --w: min(86vw, 760px);
+      --s: calc(var(--w) / 1000);
+      position: relative;
+      width: var(--w);
+      height: calc(1169 * var(--s));
+      background: rgb(224, 221, 218);
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+    }
+
+    .pink {
+      left: calc(139 * var(--s));
+      top: calc(167 * var(--s));
+      width: calc(733 * var(--s));
+      height: calc(814 * var(--s));
+      background: rgb(242, 136, 162);
+    }
+
+    .purple-top {
+      left: calc(354 * var(--s));
+      top: calc(250 * var(--s));
+      width: calc(423 * var(--s));
+      height: calc(237 * var(--s));
+      background: rgb(148, 113, 154);
+    }
+
+    .green-core {
+      left: calc(444 * var(--s));
+      top: calc(335 * var(--s));
+      width: calc(243 * var(--s));
+      height: calc(467 * var(--s));
+      background: rgb(40, 166, 82);
+    }
+
+    .yellow-left {
+      left: calc(458 * var(--s));
+      top: calc(350 * var(--s));
+      width: calc(100 * var(--s));
+      height: calc(438 * var(--s));
+      background: rgb(199, 219, 76);
+    }
+
+    .yellow-right {
+      left: calc(574 * var(--s));
+      top: calc(350 * var(--s));
+      width: calc(99 * var(--s));
+      height: calc(438 * var(--s));
+      background: rgb(199, 219, 76);
+    }
+
+    .red {
+      left: calc(210 * var(--s));
+      top: calc(470 * var(--s));
+      width: calc(144 * var(--s));
+      height: calc(511 * var(--s));
+      background: rgb(173, 34, 43);
+    }
+
+    .purple-bottom {
+      left: calc(573 * var(--s));
+      top: calc(729 * var(--s));
+      width: calc(205 * var(--s));
+      height: calc(159 * var(--s));
+      background: rgb(148, 113, 154);
+    }
+
+    .green-base {
+      left: calc(142 * var(--s));
+      top: calc(983 * var(--s));
+      width: calc(728 * var(--s));
+      height: calc(82 * var(--s));
+      background: rgb(40, 166, 82);
+    }
+
+    .beige-base {
+      left: calc(157 * var(--s));
+      top: calc(1066 * var(--s));
+      width: calc(662 * var(--s));
+      height: calc(46 * var(--s));
+      background: rgb(205, 199, 189);
+    }
+
+    .gray-cut-left {
+      left: calc(457 * var(--s));
+      top: calc(347 * var(--s));
+      width: calc(102 * var(--s));
+      height: calc(444 * var(--s));
+      background: rgb(224, 221, 218);
+      opacity: 0.95;
+    }
+
+    .gray-cut-right {
+      left: calc(571 * var(--s));
+      top: calc(347 * var(--s));
+      width: calc(104 * var(--s));
+      height: calc(443 * var(--s));
+      background: rgb(224, 221, 218);
+      opacity: 0.95;
+    }
+
+    .lavender-line {
+      left: calc(477 * var(--s));
+      top: calc(802 * var(--s));
+      width: calc(136 * var(--s));
+      height: calc(8 * var(--s));
+      background: rgb(169, 136, 176);
     }
   </style>
 </head>
 
-<body></body>
+<body>
+  <div class="painting">
+    <div class="shape pink"></div>
+    <div class="shape purple-top"></div>
+    <div class="shape green-core"></div>
+    <div class="shape yellow-left"></div>
+    <div class="shape yellow-right"></div>
+    <div class="shape gray-cut-left"></div>
+    <div class="shape gray-cut-right"></div>
+    <div class="shape red"></div>
+    <div class="shape purple-bottom"></div>
+    <div class="shape lavender-line"></div>
+    <div class="shape green-base"></div>
+    <div class="shape beige-base"></div>
+  </div>
+</body>
 
 </html>
